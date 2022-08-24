@@ -20,7 +20,7 @@ const Home: Component<{}> = (props) => (
     <address>
       <h4>Контакти:</h4>
       <a href="https://www.facebook.com/profile.php?id=100085038212389">
-        Александъ Тодоров
+        Александър Тодоров
       </a>
       <br />
       <a href="mailto:eng.a.todorov@proton.me">eng.a.todorov@proton.me</a>{" "}
