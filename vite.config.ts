@@ -4,6 +4,7 @@ import solidPlugin from 'vite-plugin-solid';
 export default defineConfig({
   plugins: [solidPlugin()],
   build: {
+    base: "./",
     target: 'esnext',
     polyfillDynamicImport: false,
   },
