@@ -1,0 +1,68 @@
+// https://www.coredesignsystem.com/core-elements/
+// https://ethanschoonover.com/solarized/
+
+:root {
+    // background tones
+    // (dark theme)
+    --base03: #1C1C28;
+    --base02: #28293D;
+    // content tones
+    --base01: #586e75; //no color
+    --base00: #2F3044;
+    --base0: #cccccc;
+    --base1: #93a1a1; //no color
+    // background tones
+    // (light theme)
+    --base2: #FFFFFF;
+    --base3: #F7F7FA;
+    // accent tones
+    --yellow: #fccf03;
+    --orange: #FDAC42;
+    --red: #FF5C5C;
+    --magenta: #d33682; //no color
+    --violet: #AC5DD9;
+    --blue: #5B8DEF;
+    --cyan: #21b9c4;
+    --green: #18814d;
+}
+
+.solar {
+    // background tones
+    // (dark theme)
+    --base03: #002b36;
+    --base02: #073642;
+    // content tones
+    --base01: #586e75;
+    --base00: #657b83;
+    --base0: #839496;
+    --base1: #93a1a1;
+    // background tones
+    // (light theme)
+    --base2: #eee8d5;
+    --base3: #fdf6e3;
+    // accent tones
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+}
+
+.light {
+    --bg: var(--base3);
+    --bg-highlighted: var(--base2);
+    --comment: var(--base1);
+    --text: var(--base00);
+    --text-emphasized: var(--base01);
+}
+
+.dark {
+    --bg: var(--base03);
+    --bg-highlighted: var(--base02);
+    --comment: var(--base1);
+    --text: var(--base0);
+    --text-emphasized: var(--base1);
+}

@@ -1,0 +1,121 @@
+.quote {
+    grid-area: quote;
+    background-color: var(--bg);
+    padding: 1em;
+    border-top: solid 0.1em var(--violet);
+    border-bottom: solid 0.1em var(--violet);
+    font-weight: 500;
+    height: min-content;
+
+    svg {
+        height: 1.5em;
+        float: left;
+        margin: 0 1em 0 0;
+    }
+
+    footer {
+        margin-top: 1em;
+        font-style: italic;
+        text-align: right;
+    }
+
+    .main-color {
+        stop-color: var(--violet);
+    }
+
+    .alt-color {
+        stop-color: var(--gray4);
+    }
+}
+
+.theme-picker {
+    display: flex;
+
+    span {
+        width: 1.5em; 
+        height: 1.5em; 
+        fill: var(--text);
+        cursor: pointer;
+        margin-inline: 0.5em;
+    }
+}
+
+.container {
+    width: min(100% - 2rem, 60rem);
+    margin-inline: auto;
+}
+
+#route {
+    grid-area: route;
+}
+
+#side-nav {
+    grid-area: side-nav;
+    height: min-content;
+
+    .accordion {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        padding-inline: .5em;
+        max-width: 13em;
+
+        a {
+            margin: .5em;
+        }
+
+        span {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            padding: .5em;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--bg-highlighted);
+            }
+
+            &::after {
+                align-self: center;
+                content: "\276F";
+                text-align: center;
+                transition: transform .35s ease-in-out;
+                width: 1em;
+                display: inline-block;
+                transform: rotate(90deg);
+            }
+        }
+
+        .sub-menu {
+            padding-inline: .5em;
+            transition: transform .35s ease-in-out, max-height .35s ease-in-out;
+            transform-origin: top;
+            transform: scaleY(1);
+            max-height: 100%;
+        }
+
+        &.collapsed {
+            .sub-menu {
+                transform: scaleY(0);
+                max-height: 0;
+            }
+
+            span::after {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+@media (min-width: 40rem) {
+    #root {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-gap: 1rem;
+        grid-template-areas:
+            "header header header"
+            "side-nav routes-outlet quote"
+            "side-nav routes-outlet .";
+    }
+}

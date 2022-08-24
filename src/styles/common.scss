@@ -1,0 +1,38 @@
+@import './native-elements/links.scss';
+
+#root {
+    min-height: 100vh;
+    color: var(--text);
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+
+    >header {
+        grid-area: header;
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            font-size: larger;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+
+            svg {
+                height: 4rem;
+                fill: var(--text);
+            }
+        }
+
+        >* {
+            margin-inline: 1rem;
+        }
+    }
+}
+
+img {
+    width: 100%;
+}

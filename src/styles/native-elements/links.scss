@@ -1,0 +1,29 @@
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  margin-inline: 0.5em;
+  border-bottom: 4px solid transparent;
+  color: var(--magenta);
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    border-bottom: 4px solid var(--magenta);
+    transition: 0.4s;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &:hover,
+  &.active {
+    border-bottom: 4px solid var(--magenta);
+    transition: 0.4s;
+  }
+}
