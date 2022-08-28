@@ -19,7 +19,7 @@ const menu: Navigation[] = [
   },
   {
     label: 'Arduino'
-  }
+  },
 ];
 
 const SideNavigation: Component = () => (
