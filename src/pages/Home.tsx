@@ -30,5 +30,4 @@ const Home: Component<{}> = (props) => (
     </address>
   </>
 );
-
 export default Home;
