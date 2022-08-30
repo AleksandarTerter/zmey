@@ -9,7 +9,7 @@ import { intro } from "../data/JavaScript/variables";
 const RoutesOutlet: Component = () => (
   <div id="routes-outlet" class="container">
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/program" element={<Program />} />
       <Route path="/javascript/intro" element={<Article {...intro} />} />
     </Routes>

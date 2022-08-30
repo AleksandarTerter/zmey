@@ -10,7 +10,7 @@ const Header: Component = () => (
       <span>Змей</span>
     </span>
     <nav>
-      <NavLink href="/" end>
+      <NavLink href="/home" end>
         Змей
       </NavLink>
       <NavLink href="/program">Програма</NavLink>
