@@ -10,33 +10,41 @@ const ThemePicker: Component = () => {
 
     onMount(() => {
         themeEl = document.getElementById('root');
-        onLight();
-        onSolar();
+        activateLightOrDarkTheme();    
+        activateOrDeactivateSolarTheme();
     })
 
-    const onLight = () => {
+    const onLightChange = () => {
         setIsLight(!isLight());
         localStorage.setItem('isLight', isLight().toString());
-        if (isLight()) {
-            themeEl!.classList.add('light')
-            themeEl!.classList.remove('dark')
-        } else {
-            themeEl!.classList.add('dark')
-            themeEl!.classList.remove('light')
-        }    
+        activateLightOrDarkTheme();    
     }
 
-    const onSolar = () => {
+    const onSolarChange = () => {
         setIsSolar(!isSolar());
         localStorage.setItem('isSolar', isSolar().toString());
+        activateOrDeactivateSolarTheme();
+    }
+
+    const activateLightOrDarkTheme = () => {
+        if (isLight()) {
+            themeEl!.classList.add('light');
+            themeEl!.classList.remove('dark');
+        } else {
+            themeEl!.classList.add('dark');
+            themeEl!.classList.remove('light');
+        }
+    }
+
+    const activateOrDeactivateSolarTheme = () => {
         isSolar()
             ? themeEl!.classList.add('solar')
-            : themeEl!.classList.remove('solar')
+            : themeEl!.classList.remove('solar');
     }
 
     return <span class='theme-picker'>
-        <span onClick={onLight}>{svgs.darkLight}</span>
-        <span onClick={onSolar}>{svgs.sun}</span>
+        <span onClick={onLightChange}>{svgs.darkLight}</span>
+        <span onClick={onSolarChange}>{svgs.sun}</span>
     </span>
 }
 
