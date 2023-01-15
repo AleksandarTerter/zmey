@@ -1,8 +1,8 @@
-import { ArticleProps } from "../../pages/Article";
+import { Content } from "../../pages/Article";
 
-export const intro: ArticleProps = {
+export const intro: Content = {
   header: "Въведение в JS",
-  subTopics: [
+  resource: [
     {
       header: "Какво е JS",
       data: [
@@ -37,9 +37,9 @@ export const intro: ArticleProps = {
   ],
 };
 
-export const variablesAndConstants: ArticleProps = {
+export const variablesAndConstants: Content = {
   header: "JavaScript Variables and Constants",
-  subTopics: [
+  resource: [
     {
       header: "JavaScript Variables",
       data: [

@@ -1,7 +1,7 @@
 import './styles/style.scss';
 
-import App from './App';
-import { Router } from 'solid-app-router';
+import { Router } from "@solidjs/router";
 import { render } from 'solid-js/web';
+import App from './App';
 
 render(() => <Router><App /></Router>, document.getElementById('root') as HTMLElement);

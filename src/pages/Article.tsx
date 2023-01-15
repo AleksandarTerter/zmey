@@ -1,7 +1,7 @@
 import { Component, For, Show } from "solid-js";
 
-import CodeViewer from "../components/CodeViewer";
 import { TypedInterface } from "../abstractions/TypedInterface";
+import CodeViewer from "../components/CodeViewer";
 
 export interface Code extends TypedInterface {
   type: "code";
@@ -13,20 +13,20 @@ export interface Text extends TypedInterface {
   value: string;
 }
 
-export interface SubTopic {
+export interface Resource {
   header: string;
   data: (Text | Code)[];
 }
 
-export interface ArticleProps {
+export interface Content {
   header: string;
-  subTopics: SubTopic[];
+  resource: Resource[];
 }
 
-const Article: Component<ArticleProps> = (props: ArticleProps) => (
+const Article: Component<Content> = (props: Content) => (
   <article>
     <h2>{props.header}</h2>
-    <For each={props.subTopics}>
+    <For each={props.resource}>
       {(subTopic) => (
         <>
           <h3>{subTopic.header}</h3>

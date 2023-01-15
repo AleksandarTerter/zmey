@@ -113,11 +113,11 @@ const Program: Component = () => (
     <h3>Ардуино</h3>
     <h4>Какво е Ардуино</h4>
     <p>
-    По същество Arduino са микроконтролерни развойни платки (плакти служещи за обучение или разработка на електрически схеми). Arduino се състои от 8-битов Atmel AVR микроконтролер (програмируеми чипове) с допълващи се компоненти, които улесняват програмирането и включването в други вериги. Важен аспект на Arduino платформата, е наличието на стандартни конектори, които позволяват на потребителите да свързват CPU платката към голям набор от различни, взаимнозаменяеми модули, наречени шилдове.
+      По същество Arduino са микроконтролерни развойни платки (плакти служещи за обучение или разработка на електрически схеми). Arduino се състои от 8-битов Atmel AVR микроконтролер (програмируеми чипове) с допълващи се компоненти, които улесняват програмирането и включването в други вериги. Важен аспект на Arduino платформата, е наличието на стандартни конектори, които позволяват на потребителите да свързват CPU платката към голям набор от различни, взаимнозаменяеми модули, наречени шилдове.
     </p>
 
     <img src="src/assets/images/ArduinoUno.png" />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/TesnKjba0l0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TesnKjba0l0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h4>Примерен код:</h4>
     <CodeViewer code={arduinoCode} type={CodeType.js} />
   </>

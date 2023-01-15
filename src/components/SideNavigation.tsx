@@ -1,35 +1,15 @@
 import { Component, For } from "solid-js";
-import NavigationMenu, { Navigation } from "./NavigationMenu";
-
-const menu: Navigation[] = [
-  {
-    label: 'HTML'
-  },
-  {
-    label: 'CSS'
-  },
-  {
-    label: "JavaScript",
-    subPaths: [
-      {
-        label: "Какво е  JavaScript",
-        path: "javascript/intro",
-      }
-    ],
-  },
-  {
-    label: 'Arduino'
-  },
-];
+import { topics } from "../data/topics";
+import NavigationMenu from "./NavigationMenu";
 
 const SideNavigation: Component = () => (
   <div id="side-nav">
-    <For each={menu}>
-      {(navigation) => (
+    <For each={topics}>
+      {(topic) => (
         <NavigationMenu
-          label={navigation.label}
-          path={navigation.path}
-          subPaths={navigation.subPaths}
+          label={topic.label}
+          path={topic.path}
+          subTopics={topic.subTopics}
         ></NavigationMenu>
       )}
     </For>

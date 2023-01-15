@@ -1,7 +1,8 @@
+import { A } from "@solidjs/router";
 import { Component } from "solid-js";
-import { NavLink } from "solid-app-router";
-import ThemePicker from "./ThemePicker";
+
 import { svgs } from "../assets/svgs";
+import ThemePicker from "./ThemePicker";
 
 const Header: Component = () => (
   <header>
@@ -10,10 +11,10 @@ const Header: Component = () => (
       <span>Змей</span>
     </span>
     <nav>
-      <NavLink href="/home" end>
+      <A href="/home" end>
         Змей
-      </NavLink>
-      <NavLink href="/program">Програма</NavLink>
+      </A>
+      <A href="/program">Програма</A>
     </nav>
     <ThemePicker />
   </header>
